@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Questionnaire Selection</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { 
+      font-family: system-ui, sans-serif; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: center; 
+      min-height: 100vh; 
+      margin: 0; 
+      padding: 2rem;
+    }
+    .container {
+      max-width: 800px;
+      width: 100%;
+    }
+    h1 { text-align: center; margin-bottom: 2rem; }
+    .questionnaire-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .questionnaire-card {
+      background: #222;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.2s;
+      border: 1px solid #444;
+    }
+    .questionnaire-card:hover {
+      transform: translateY(-2px);
+      background: #333;
+    }
+    .questionnaire-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .questionnaire-description {
+      color: #ccc;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    .questionnaire-stats {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: #888;
+    }
+    .back-link {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      color: #888;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .back-link:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-link">← Back to Player</a>
+  <div class="container">
+    <h1>Available Questionnaires</h1>
+    <div class="questionnaire-grid">
+      {{ questionnaire_cards | safe }}
+    </div>
+  </div>
+  <script>
+    // Add click handlers to questionnaire cards
+    document.querySelectorAll('.questionnaire-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const link = card.getAttribute('data-link');
+        if (link) {
+          window.location.href = link;
+        }
+      });
+    });
+  </script>
+</body>
+</html> 

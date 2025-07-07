@@ -1,0 +1,21 @@
+[project]
+name = "pai-tts"
+version = "0.1.0"
+description = "Generate a static web page that plays questionnaire items with high-quality neural TTS"
+authors = [
+    {name = "Ian Taylor"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "edge-tts",
+    "jinja2",
+    "tqdm",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [] 
