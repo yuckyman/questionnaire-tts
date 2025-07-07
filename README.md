@@ -22,8 +22,10 @@ Generate a static web page that plays questionnaire items with high-quality neur
 # Install uv if you haven't already
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
-# Install dependencies
+git clone https://github.com/yuckyman/questionnaire-tts.git
+cd questionnaire-tts
 uv sync
+uv run pai_tts.py --build-all
 ```
 
 ## Usage
