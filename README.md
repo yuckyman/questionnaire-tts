@@ -57,9 +57,9 @@ Place your questionnaire files in the `questionnaires/` directory:
 
 ```
 questionnaires/
-├── daily_health_check.txt
-├── anxiety_assessment.txt
-└── depression_screening.txt
+├── PAI.txt
+├── SASSI.txt
+└── PSI-4.txt
 ```
 
 Each `.txt` file should contain one question per line. The script will automatically:
