@@ -44,5 +44,6 @@ Thumbs.db
 
 # Logs
 *.log 
-# Ignore all files in questionnaires folder
-questionnaires/* 
+# Ignore all files in questionnaires folder, except .gitkeep
+questionnaires/*
+!questionnaires/.gitkeep 
