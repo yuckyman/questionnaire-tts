@@ -1,4 +1,4 @@
-# PAI TTS Web Player
+# Questionnaire TTS Web Player
 
 Generate a static web page that plays questionnaire items with high-quality neural TTS with **keyboard controls** and smarter **audio caching**.
 
