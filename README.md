@@ -44,6 +44,28 @@ uv run pai_tts.py --serve-only
 uv run pai_tts.py --build-all --force --voice en-US-GuyNeural
 ```
 
+## Windows Executable
+
+A pre-built Windows executable is included: `pai_tts_v3.exe`
+
+- **What is it?**
+  - A standalone version of the TTS builder for Windows users. No Python or dependencies required.
+- **How to use:**
+  1. Place your questionnaire `.txt` files in the `questionnaires/` folder (same as with the Python version).
+  2. Double-click `pai_tts_v3.exe` or run it from the command line:
+     ```
+     pai_tts_v3.exe --build-all
+     ```
+     or for a single questionnaire:
+     ```
+     pai_tts_v3.exe items.txt
+     ```
+  3. The output will be in the `tts_site/` folder, just like with the Python script.
+- **Limitations:**
+  - Only tested on Windows 10/11.
+  - Some advanced features (like custom voices or serving via HTTP) may be limited compared to the Python version.
+  - If you encounter issues, try running from the command prompt to see error messages.
+
 ## Available Voices
 
 You can use any Microsoft Edge neural voice. Some popular ones:
