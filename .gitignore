@@ -44,3 +44,5 @@ Thumbs.db
 
 # Logs
 *.log 
+# Ignore all files in questionnaires folder
+questionnaires/* 
